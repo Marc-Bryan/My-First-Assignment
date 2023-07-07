@@ -1,0 +1,16 @@
+section {
+    outline-width: 1px;
+    outline-color: gray;
+    padding: 16px;
+    height: 400px;
+    width: 400px;
+}
+
+.h1 {
+margin-bottom: 14px;
+}
+
+.red {
+    color: red;
+    padding-right: 38px;
+}

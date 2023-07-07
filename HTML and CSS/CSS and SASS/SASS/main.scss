@@ -1,0 +1,107 @@
+$blue: blue;
+$red: red;
+$orange: orange;
+$green: green;
+$border: 100px solid transparent;
+
+@mixin shape($width, $height, $bg) {
+    width: $width;
+    height: $height;
+    background-color: $bg;
+}
+
+@mixin triangle($location, $color) {
+    width: 0;
+    height: 0;
+
+    @if $location ==left {
+        border-top: $border;
+        border-bottom: $border;
+        border-right: 100px solid $color;
+    }
+
+    @else if $location ==up {
+        border-left: $border;
+        border-right: $border;
+        border-bottom: 100px solid $color;
+    }
+
+    @else if $location ==down {
+        border-left: $border;
+        border-right: $border;
+        border-top: 100px solid $color;
+    }
+
+    @else if $location ==right {
+        border-top: $border;
+        border-bottom: $border;
+        border-left: 100px solid $color;
+    }
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    gap: 50px;
+    place-items: center;
+}
+
+.triangle-left {
+    @include triangle(left, $blue);
+}
+
+.triangle-up {
+    @include triangle(up, $orange);
+}
+
+.triangle-down {
+    @include triangle(down, $red);
+}
+
+.triangle-right {
+    @include triangle(right, $green);
+}
+
+.ellipse-horizontal {
+    @include shape(180px, 90px, null);
+    border-radius: 50%;
+}
+
+.ellipse-vertical {
+    @include shape(90px, 180px, null);
+    border-radius: 50%;
+}
+
+.rectangle-horizontal {
+    @include shape(120px, 80px, null);
+}
+
+.rectangle-vertical {
+    @include shape(80px, 120px, null);
+}
+
+.orange {
+    @include shape(null, null, $orange);
+}
+
+.red {
+    @include shape(null, null, $red);
+}
+
+.blue {
+    @include shape(null, null, $blue);
+}
+
+.green {
+    @include shape(null, null, $green);
+}

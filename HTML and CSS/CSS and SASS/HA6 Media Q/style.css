@@ -1,0 +1,39 @@
+.box1 {
+    display: none;
+}
+
+.box2 {
+    display: none;
+}
+
+.box3 {
+    display: none;
+}
+
+@media only screen and (min-width: 688px) {
+    .box1 {
+       display: block;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .box1 {
+        display: none;
+    }
+    .box2 {
+       display: block;
+    }
+}
+
+@media only screen and (min-width: 1312px) {
+    .box1 {
+        display: none;
+    }
+    .box2 {
+        display: none;
+    }
+    .box3 {
+       display: block;
+    }
+}

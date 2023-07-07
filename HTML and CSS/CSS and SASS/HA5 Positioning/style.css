@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container-quotation {
+    display: flex;
+    position: fixed;
+    z-index: -2;
+    right: 20%;
+    bottom: 75%;
+}
+.container-items {
+    width: 100vw;
+    height: 500px;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+.container-items {
+    text-align: center;
+}
+
+.item-1 {
+    position: absolute;
+    right: 0;
+}
+
+.item-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-1{
+    width: 150px;
+    height: 150px;
+    border: 5px solid black;
+}
+
+
+
+.item-2 {
+    position: absolute;
+    bottom: 0;
+}
+
+.item-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-2{
+    width: 150px;
+    height: 150px;
+    border: 5px solid black;
+}
+
+.div-boxes {
+    width: 100vw;
+    height: 500px;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.box-1, .box-2, .box-3 {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.box-1 {
+    background-color: red;
+    position: absolute;
+    right: 0;
+}
+.box-2 {
+    background-color: blue;
+    background-image: url(https://doc-0g-08-docs.googleusercontent.com/docs/securesc/jgskhg7ftavr4b1dc7o3antvgpkq2fpe/dtslm897iind09cqf4vi2mh0taa9uiea/1675301475000/00006760279141513657/11554350445430638111/1tnnE9Gf1NcWInWrChSXi_VUXkLGXeCbg?e=view&ax=AB85Z1C0mM07BCmELbvznPumKSe0Ublj2tZPmJpRzxD9Du40Ttp1wr6vVUeFZLZAnY6WSnQ2D7Sg9_OCgEKtl37RcJOlTPTAhKe0CRlIyaLepOpOVoZmoh-V15ezVGQB8oLEGjcSq1QaHSZ09lpOTqTSAn9kwHhesu9r-8_HC7f1_0wf6HJn0gh2uj4BGbucYOdkJ12GfmIHub8dKxy3vH7wCUalJXBHltJHNUWaRsAJbl_VfiKiwD09iTi4irQD2dhkV9fzM44pfnR7f9hNtOPbnn7xWRULu1GG7rq5tVgLpnvxOQMpnK9ph0RE9hC6LCPOFmYEWhUsVysEt47dIu5d0xuoqdrj41rV4TwREl4tDLiwdNj6lfpDKwZSfF49G-MhUF8O1dgEjzBLJsKfshA0_DbepGwWezkfo1uls-_Ml3CvzDTyU_yNCA5JwdWOYPzPu1NQnMzqw-32um-O6qVsYpoKF1wOqNq70-cVJrRiN-CYdWcmSxhpV0knEXZzEgPe12j6Kj8KxlcKrQaJhqJa113VycjkWISD_D9tgWtlYkjUggKw0CiK6FvnQneaOkcaacfcOZxfbUt8fTdfIdSHOEPhbTH8JuP3EX58GPXDxB0xLWbjfIAOf9Pzzge_Yu4CbTPaBfDFIyH3Lr-RxszNC8tkZ41dm3ru4dt--yno9aDdVDOfbHKVTeNaZMlzUWBr1dK0COoUBErdCcG7WDr_KSYig4ULlOibiTOrDSs5lt3yZs7FlFWY-dXvWZRfS8x5ItDjN8y3m1iey84__rEa3IfjrPthwXiwE5-4Ddr9uCuX8U9p1OF0GaOEt6cQ-e41miqX_DdBkASy86WVTp7x4P3LvFI7v_54j3VABCB-IYdg6qlf0CtBkzPKukPzIE4&uuid=d68cc18f-dadd-4d50-8c7c-bd8d34ccbca0&authuser=0&nonce=47eodibhhlio6&user=11554350445430638111&hash=jf9iuiqr1eer28vgc54nnqmvudd0kls8);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    }
+.box-3 {
+    background-color: yellow;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    
+
+    
+
+}
+
+.line-1, .line-4 {
+    display: inline;
+}
+
+.line-2, .line-3, {
+    display: block;
+}
+
+.hidden {
+    display: inline-block;
+}
+/* DO NOT EDIT THE CODE ABOVE */
+
+/* START CODING BELOW line 87 👇🏽*/
+
