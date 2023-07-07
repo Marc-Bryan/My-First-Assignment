@@ -1,0 +1,69 @@
+.parent{
+    display: flex;
+    background-color: #162040;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+        
+}
+.refocus-logo{
+    display: flex;
+    justify-self: left;
+    
+}
+.container {
+    display: flex;
+    color: white;
+    gap: 27px;
+}
+
+.p1 {
+    display: flex;
+    font-family: sans-serif;
+    align-self: center;
+    color: white;
+    font size: 30px;
+    margin-left: 27px;
+}
+@media only screen and (min-width: 320px){
+    .parent {
+        padding: 0px 30px;
+    }
+    .container{
+        display: none;
+    }
+    .bg{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .parent {
+        padding: 0px 60px;
+    }
+    .container{
+        display: flex;
+    }
+    .bg{
+        display: flex;
+        height: 100px;
+    }
+    
+    .p1{
+        display: none;
+        font-size: 40px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .parent {
+        padding: 0px 60px;
+    }
+    .bg{
+        display: none;
+    }
+    .p1{
+        display: flex;
+    }
+}
