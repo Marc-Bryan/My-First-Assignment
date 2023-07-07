@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+
+<body>
+
+
+    <form name="vaccinerecord" id="vr">
+        <div class="form-control">
+            <label for="Name">First Name</label><br />
+            <input type="text" id="FirstName" name="Name"><br />
+            <label for="Name">Middle Name</label><br />
+            <input type="text" id="MiddleName" name="Name"><br />
+            <label for="Name">Last Name</label><br />
+            <input type="text" id="LastName" name="Name"><br />
+            <label for="Birthday">Birthday</label><br />
+            <input type="date" id="Birthday" name="Birthday"><br />
+            <label for="Email">Email</label><br />
+            <input type="Email" id="Email" name="Email"><br />
+            <label for="Region">Region</label><br />
+            <select name="Region" id="regionSelect">
+                <option value="Choose 1">Choose One</option>
+                <option value="Region I">Ilocos Region</option>
+                <option value="Region II">Cagayan Valley</option>
+                <option value="Region III">Central Luzon</option>
+                <option value="Region IV-A">CALABARZON</option>
+                <option value="MIMAROPA Region">MIMAROPA Region</option>
+                <option value="Region V">Bicol Region</option>
+                <option value="Region VI">Western Visayas</option>
+                <option value="Region VII">Central Visayas</option>
+                <option value="Region VIII">Eastern Visayas</option>
+                <option value="Region IX">Zamboanga Peninsula</option>
+                <option value="Region X">Northern Mindanao</option>
+                <option value="Region XI">Davao Region</option>
+                <option value="Region XII">SOCCSKSARGEN</option>
+                <option value="Region XIII">Caraga</option>
+                <option value="NCR">National Capital Region</option>
+                <option value="CAR">Cordillera Administrative Region</option>
+                <option value="BARMM">Bangsamoro Autonomous Region in Muslim Mindanao</option>
+            </select><br />
+            <label for="Province">Province</label><br />
+            <input type="text" id="Province" name="Province"><br />
+            <label for="Barangay">Barangay</label><br />
+            <input type="text" id="Barangay" name="Barangay"><br />
+            <label for="Street">Street</label><br />
+            <input type="text" id="Street" name="Street"><br />
+            <Label for="gender" id="gender">Gender:
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="Other"> Other
+            </label><br>
+            <label for="Vaccine"> Vaccine: </label>
+            <select id="vaccineSelect"><br />
+                <option value="Choose Vaccine">Choose Vaccine</option>
+                <option value="Pfizer BioNTech">Pfizer BioNTech</option>
+                <option value="AstraZeneca">AstraZeneca</option>
+                <option value="Coronavac">Coronavac</option>
+                <option value="Sputnik V">Sputnik V</option>
+                <option value="Janssen">Janssen</option>
+                <option value="Covaxin">Covaxin</option>
+                <option value="Moderna">Moderna</option>
+                <option value="Sinopharm">Sinopharm</option>
+                <option value="Covovax">Covovax</option>
+            </select><br />
+            <label for="vaccinationDate">Date of Vaccination (Dose 1):</label>
+            <input type="date" id="vaccinationDate" name="vaccinationDate"> <br />
+            <label for="vaccinationSiteDose1">Vaccination (Dose 1) Site:</label>
+            <input type="text" id="vaccinationSiteDose1" placeholder="Enter vaccination site for Dose 1"> <br />
+            <label>
+                Did you already get your second vaccination?
+                <input type="radio" name="secondVaccination" value="yes"> Yes
+                <input type="radio" name="secondVaccination" value="no"> No
+            </label> <br />
+            <input type="submit" value="Submit">
+        </div>
+
+        <script>
+            const form = document.querySelector("#vr");
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                const firstname = document.getElementById("FirstName").value;
+                const middlename = document.getElementById("MiddleName").value;
+                const lastname = document.getElementById("LastName").value;
+                const dob = document.getElementById("Birthday").value;
+                const email = document.getElementById("Email").value;
+                const region = document.getElementById("regionSelect").value;
+                const province = document.getElementById("Province").value;
+                const barangay = document.getElementById("Barangay").value;
+                const street = document.getElementById("Street").value;
+                const gender = document.querySelector('input[name="gender"]:checked').value;
+                const vaccine = document.getElementById("vaccineSelect").value;
+                const vaccinationDate = document.getElementById("vaccinationDate").value;
+                const vaccinationSiteDose1 = document.getElementById("vaccinationSiteDose1").value;
+                const secondVaccination = document.querySelector('input[name="secondVaccination"]:checked').value;
+
+                const resultContainer = document.createElement("div");
+                resultContainer.innerHTML = `
+                    <h2>Submitted Answers:</h2>
+                    <p><strong>First Name:</strong> ${firstname}</p>
+                    <p><strong>Middle Name:</strong> ${middlename}</p>
+                    <p><strong>Last Name:</strong> ${lastname}</p>
+                    <p><strong>Birthday:</strong> ${dob}</p>
+                    <p><strong>Email:</strong> ${email}</p>
+                    <p><strong>Region:</strong> ${region}</p>
+                    <p><strong>Province:</strong> ${province}</p>
+                    <p><strong>Barangay:</strong> ${barangay}</p>
+                    <p><strong>Street:</strong> ${street}</p>
+                    <p><strong>Gender:</strong> ${gender}</p>
+                    <p><strong>Vaccine:</strong> ${vaccine}</p>
+                    <p><strong>Date of Vaccination (Dose 1):</strong> ${vaccinationDate}</p>
+                    <p><strong>Vaccination (Dose 1) Site:</strong> ${vaccinationSiteDose1}</p>
+                    <p><strong>Did you already get your second vaccination?</strong> ${secondVaccination}</p>
+                `;
+
+                const existingResultContainer = document.getElementById("result-container");
+                if (existingResultContainer) {
+                    existingResultContainer.remove();
+                }
+
+                resultContainer.id = "result-container";
+                form.appendChild(resultContainer);
+            });
+        </script>
+    </form>
+
+    </form>
+</body>
+
+</html>
