@@ -26,7 +26,7 @@
     font size: 30px;
     margin-left: 27px;
 }
-@media only screen and (min-width: 320px){
+@media only screen and (max-width: 767px){
     .parent {
         padding: 0px 30px;
     }
@@ -38,7 +38,7 @@
     }
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) and (max-width: 1023px){
     .parent {
         padding: 0px 60px;
     }
